@@ -6,10 +6,10 @@ Everything written here can be very wrong
 
 
 Martin Kouba:
-> it's probably because bean A is never instantiated, the constructor is called when a client proxy is injected into Service, BUT the real problem is a.counter++;... you can't do this for normal scoped beans (incl. @RequestScoped), **you can't access fields of a normal scoped bean, instead you need to call a business method...**
+>It's probably because bean A is never instantiated, the constructor is called when a client proxy is injected into Service, BUT the real problem is a.counter++;... you can't do this for normal scoped beans (incl. @RequestScoped), **you can't access fields of a normal scoped bean, instead you need to call a business method...**
 see also https://quarkus.io/guides/cdi#client_proxies
 >
->Martin Kouba: this is a CDI limitation...
+>This is a CDI limitation...
 
 This is really important! So let me repeat:
 
